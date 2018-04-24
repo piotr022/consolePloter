@@ -5,7 +5,7 @@ Function::Function(char *PTF)
 :fx(PTF)    {}
 /////// End of Function implementations
 
-Graph::Graph(int COL, int ROW)
+Graph::Graph(int COL, int ROW)//Graph imp
 :rows(ROW), columns(COL)  //default values
 {
       //axis lenght from -10 to 10
@@ -45,10 +45,20 @@ void Graph::print()const       //this will print our nice graph :3
         if(i%columns == 0)  //new line
             std::cout << std::endl;
     }
-    std::cout << 
+    std::cout << "wtf";
 }
 
 Graph::~Graph()
 {
     delete [] XY;
+}
+//endofgraph
+
+Calculator::Calculator(Function &FX)
+:Function(FX.getfxC()){}    //initialise CHAR from FX
+
+
+Calculator::~Calculator()
+{
+
 }

@@ -8,6 +8,7 @@ class Function      //its store pointer to function char
 public:
     Function(char*);
     virtual ~Function() {}
+    char* getfxC()const{return this->fx;}
 private:
     char* fx;
 };
@@ -24,4 +25,10 @@ private:
     int rows;
     int columns;
 
+};
+
+class Calculator:public Function
+{
+    Calculator(Function&);
+    virtual ~Calculator();
 };
